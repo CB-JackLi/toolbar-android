@@ -30,6 +30,8 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.uimanager.PixelUtil;
 
 import javax.annotation.Nullable;
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Custom implementation of the {@link Toolbar} widget that adds support for remote images in logo
@@ -112,6 +114,10 @@ public class ReactToolbar extends Toolbar {
     public IconImageInfo(int width, int height) {
       mWidth = width;
       mHeight = height;
+    }
+    
+    public Map<String,Object> getExtras() { 
+      return new HashMap<String,Object>(); 
     }
 
     @Override
